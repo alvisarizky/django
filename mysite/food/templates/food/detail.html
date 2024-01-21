@@ -1,0 +1,28 @@
+{% extends 'food/base.html ' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail item</title>
+</head>
+
+<body>
+    {% block body %}
+    <div class="container" style="padding: 16px">
+        <div class="row">
+            <div class="col-md-6"> <img height="400px" width="400px" src="{{ object.item_image }}" alt="" class="card" style="object-fit: cover; object-position: center; width: 400px; height: 400px;"> </div>
+            <div class="col-md-6" style="padding: 16px">
+                <h3>{{ object.item_name }}</h3>
+                <p>{{ object.item_desc }}</p>
+                <p>{{ object.item_price }}</p>
+                <p>Added By: {{ item.user_name }} </p>
+                <a href="{% url 'food:delete_item' item.id %}" class="btn btn-danger"> Delete </a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.card-title {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.card-text {
+    color: mediumslateblue;
+    font-weight: 600;
+}
